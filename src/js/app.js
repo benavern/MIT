@@ -25,7 +25,7 @@ function setAuthorInfo(options) {
     var link = document.createElement("a");
     authorEl.appendChild(link);
     link.href = author.link;
-    link.target = "_blank"
+    link.target = "_blank";
     link.innerHTML = (author.name);
   }
   else{
