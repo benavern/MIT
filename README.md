@@ -31,6 +31,8 @@ The URL will be :
 
 [http://benavern.github.io/MIT#name=Benjamin Caradeuc&link=http://caradeuc.info/](http://benavern.github.io/MIT#name=Benjamin Caradeuc&link=http://caradeuc.info/)
 
+![Screenshot](screenshot.png "Screenshot")
+
 ## License
 
 [MIT](http://benavern.github.io/MIT#name=Benjamin Caradeuc&link=http://caradeuc.info/)
