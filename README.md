@@ -18,10 +18,12 @@ http://benavern.github.io/MIT/
 
 ## HowTo
 
-To personalize it, you just have to add some search-like information in the url's hash
+To personalize it, you just have to add some search parameters information in the url
 
-* `name` :  yours or your companies
-* `link` : (optional) a URL or mailto link to give the visitor a chance to contact you
+* `name` :  The name you want to display
+* `email` :  An email that will allow to contact you
+* `website` : A website url with or without the `http`/`https` protocol (`https` will be automatically added if needed)
+* `from` : If you want to display a period instead of a single date
 
 ## Demo
 
@@ -29,7 +31,7 @@ Take me, my name is Benjamin Caradeuc and my personal website (where you can fin
 
 The URL will be :
 
-[http://benavern.github.io/MIT#name=Benjamin Caradeuc&link=http://caradeuc.info/](http://benavern.github.io/MIT#name=Benjamin Caradeuc&link=http://caradeuc.info/)
+[https://benavern.github.io/MIT?name=Benjamin%20Caradeuc&website=benjamin.caradeuc.info](https://benavern.github.io/MIT?name=Benjamin%20Caradeuc&website=benjamin.caradeuc.info)
 
 ![Screenshot](screenshot.png "Screenshot")
 
