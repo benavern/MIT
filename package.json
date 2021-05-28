@@ -1,32 +1,27 @@
 {
   "name": "mit",
-  "version": "1.0.0",
-  "description": "mit page for my projects",
-  "main": "index.html",
+  "version": "2.0.0",
+  "description": "MIT License page for my projects",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug",
+    "prebuild": "npm run clean",
+    "clean": "rimraf .cache dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benavern/MIT.git"
   },
-  "author": "benavern",
+  "author": "Benjamin Caradeuc <benjamin@caradeuc.info> (benjamin.caradeuc.info)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/benavern/MIT/issues"
   },
   "homepage": "https://github.com/benavern/MIT#readme",
   "devDependencies": {
-    "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.1.0",
-    "gulp-uglify": "^1.5.1",
-    "jshint": "^2.8.0"
+    "parcel-bundler": "^1.12.5",
+    "pug": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.34.0"
   }
 }

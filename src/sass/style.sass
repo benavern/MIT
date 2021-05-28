@@ -13,15 +13,15 @@ body
 
 .content
   background: #fff
-  max-width: 900px
+  width: calc(960px - 2rem)
+  max-width: calc(100% - 2rem)
   margin: 4rem auto 0
   padding: 2rem
   box-shadow: 0 0 50px rgba(black, .3)
   border-radius: .5rem
 
   @media(max-width: 960px)
-    max-width: none
-    margin: 1rem 1rem 0
+    margin: 2rem 1rem 0
     padding: 1rem
 
   h1
@@ -30,6 +30,15 @@ body
   p
     margin: 2rem 0 0
     line-height: 170%
+  
+  a
+    color: inherit
+    font-weight: 900
+    text-decoration: underline
+    cursor: pointer
+
+    &:hover
+      color:#888  
 
 .red
   color: red

@@ -1,34 +1,30 @@
-(function() {
-  var authorInfo = getAuthorInfo();
-  setAuthorInfo(authorInfo);
-})();
+(function setAuthorInfo() {
+  const $date = document.querySelector('span.date')
+  const $authorName = document.querySelector('span.author .author__name')
+  const $authorEmail = document.querySelector('span.author .author__email')
+  const $authorWebsite = document.querySelector('span.author .author__website')
 
-function getAuthorInfo() {
-  var output = {};
-  if (window.location.hash !== "") {
-    var hashData = window.location.hash.substr(1).split("&");
-    for (var i=0;  i < hashData.length; i++) {
-      var hashValue = hashData[i].split("=");
-      output[unescape(hashValue[0])] = (hashValue.length > 1 && hashValue[1] !== "") ? unescape(hashValue[1]) : null;
-    }
-  }
-  return output;
-}
+  const date = (new Date()).getFullYear()
+  const searchParams = new URLSearchParams(window.location.search)
 
-function setAuthorInfo(options) {
-  var authorEl = document.querySelector('span.author');
-  var author = {
-    name : options.name || "&lt;AUTHOR&gt;",
-    link : options.link
-  };
-  if(author.link){
-    var link = document.createElement("a");
-    authorEl.appendChild(link);
-    link.href = author.link;
-    link.target = "_blank";
-    link.innerHTML = (author.name);
-  }
-  else{
-    authorEl.innerHTML = author.name;
-  }
-}
+  const authorName = searchParams.get('name')
+  const authorEmail = searchParams.get('email')
+  const authorWebsite = searchParams.get('website')
+  const dateFrom = searchParams.get('from')
+
+  $date.textContent = dateFrom  ? `${dateFrom} - ${date}`: date
+
+  $authorName.textContent = authorName || ''
+
+  $authorEmail.innerHTML = authorEmail 
+    ? ` &lt;<a href="mailto:${authorEmail}">${authorEmail}</a>&gt;`
+    : ''
+
+  const computedAuthorWebsite = authorWebsite.startsWith('http')
+    ? authorWebsite
+    : `https://${authorWebsite}`
+
+  $authorWebsite.innerHTML = authorWebsite
+    ? ` (<a href="${computedAuthorWebsite}">${authorWebsite}</a>)`
+    : ''
+})()
