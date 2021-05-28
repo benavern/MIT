@@ -4,8 +4,7 @@
   "description": "MIT License page for my projects",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug --out-dir docs",
-    "prebuild": "npm run clean",
+    "build": "parcel build src/index.pug --out-dir docs --public-url /MIT",
     "clean": "rimraf .cache dist"
   },
   "repository": {
